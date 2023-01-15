@@ -1,0 +1,36 @@
+menu "Remote Configuration"
+
+    config MDNS_HOST_NAME
+        string "mDNS Host Name"
+        default "home-remote"
+        help
+            Specify the domain name used in the mDNS service.
+            Note that webpage also take it as a part of URL where it will send GET/POST requests to.
+
+    config MDNS_INSTANCE_NAME
+        string "mDNS Instance Name"
+        default "My Remote Control"
+        help
+            Specify the instance name used in the mDNS service.
+
+    config SWITCHBOT_TOKEN
+        string "SwitchBot Token"
+        default ""
+        help
+            Specify the token used to access SwitchBot API.
+            You can get it from https://github.com/OpenWonderLabs/SwitchBotAPI#authentication
+
+    config SWITCHBOT_SECRET
+        string "SwitchBot Secret"
+        default ""
+        help
+            Specify the secret used to access SwitchBot API.
+            You can get it from https://github.com/OpenWonderLabs/SwitchBotAPI#authentication
+
+    config SPEAKER_ID
+        string "SwitchBot DeviceID"
+        default ""
+        help
+            Specify the device ID of the speaker.
+            You can get it by making an API call. 
+endmenu
